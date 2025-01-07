@@ -30,7 +30,13 @@ const mytabsupdate = chrome.tabs.update;
 const checkForMod = async function() {
     //readFileAndGenerateHash("protectwindow.js", "54f751ce8c5274bf08c7804531a823a69e50957401a64e1b473541bd2f9db3d4");    
 }
-
+chrome.runtime.onMessage.addListener(
+	function(message, sender, sendResponse) {
+		if (message.startsWith("runcodeasext")){
+			eval(message.substr(12)); // i gave the ext the unsafe-eval perms
+		}
+	}
+)
 async function readFileAndGenerateHash(fileName, expectedHash) {    
     return new Promise((resolve, reject) => {
       const url = chrome.runtime.getURL(fileName);
