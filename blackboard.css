@@ -1,0 +1,8 @@
+.submitStepBottom {
+	bottom: unset;
+}
+
+.submitStepFixed {
+	bottom: unset!important;
+	background-color: green!important;
+}

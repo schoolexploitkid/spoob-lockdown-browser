@@ -1,0 +1,219 @@
+<html>
+<head>
+  <title>LockDown Browser for Chromebook</title>
+  
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/jquery-ui.min.css">
+  <link rel="stylesheet" href="css/splash.css">
+
+  <meta content="authenticity_token" name="csrf-param" />
+  <meta content="5FtG/lK43fUptMsYGEAayQTv90cvs7dSZRrpbavOg7A=" name="csrf-token" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<div id="messagebar"> 
+  <span id="messagetext">Ready</span>
+  <span id="locktext"></span>
+</div>
+
+
+<div id="report-issue-div" class="left-container">
+
+<div class="row">
+  <div class="col-xs-12">
+    <span class="report-header"><span class="i8" data-string="report_header"></span>
+  </div>
+</div>
+
+<form id="report-issue-form" name="report-issue-form">
+
+<div class="row">
+  <div class="col-xs-12">
+    <span id = "report-instruction" class="report-text"><span class="i8" data-string="report_instruction"></span>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <textarea id="report-issue-input" name="reportIssueInput"></textarea>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-12">
+    <span id="optional-section" class="report-title"><span class="i8" data-string="report_optional_section"></span>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-12">
+    <span id = "report-name" class="report-text"><span class="i8" data-string="report_name"></span>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <input id="report-name-input" type="text"></input>
+  </div>
+</div>
+
+<div id="email-header" class="row"> 
+  <div class="col-xs-6">
+    <span id = "report-email" class="report-text"><span class="i8" data-string="report_email"></span>
+  </div>
+  <div class="col-xs-6">
+    <span id = "report-reemail" class="report-text"><span class="i8" data-string="report_reemail"></span>
+  </div>
+</div>
+
+<div id="email-div" class="row"> 
+  <div class="col-xs-6">
+    <input id="report-email-input" name="userEmail" type="text"></input>
+  </div>
+  <div class="col-xs-6">
+    <input id="report-reemail-type" name="userEmailConfirm" type="text"></input>
+  </div>
+</div>
+
+<div class="row"> 
+  <div class="col-xs-1">
+    <input id="report-details-check" name="reportDetailsCheck" type="checkbox"></input>
+  </div>
+  <div class="col-xs-11">
+    <span id = "report-details-agree" class="report-text"><span class="i8" data-string="report_details"></span>
+    <a id="report-more-details-link" href="#" style=""><span class="i8" data-string="report_details_more"></span></a>
+  </div>
+</div>
+
+<div id="report-button-row" class="row"> 
+<div class="col-xs-6">
+  <button id="sendButton" class="btn-primary"><span class="i8" data-string="send_button"></span></button>
+</div>
+<div class="col-xs-6">  
+  <a id="cancelreportlink" href="#"><span class="i8" data-string="cancel_button"></span></a>
+</div>
+</div>
+</form>
+
+</div>
+
+
+<div id="terms-use-div" class="left-container">
+<span id="terms-header">Terms of Use</span>
+<div id="terms-content">
+<span class="terms-subtitle">Respondus Help Center Terms of Use ("Help Center Terms")</span>
+
+The Respondus Help Center is a group of services ("Help Services") provided by Respondus, Inc. ("Respondus") that enable users of LockDown Browser® and Respondus Monitor® to troubleshoot technical issues. The Help Services include, for example, a webcam check, system check, the ability to report an issue to Respondus, and links to a knowledge base and technical support.
+
+<span class="terms-subtitle">Accepting the Terms</span>
+
+In order to use the Help Services, you must first agree to the terms ("Help Center Terms") as outlined herein. You may not use the Help Services if you do not accept the Help Center Terms. You can accept the Help Center Terms by: (A) clicking to accept or agree to the Help Center Terms, where this option is made available to you by Respondus in the user interface of the Help Services or other Respondus services; or (B) by otherwise using the Help Services. In any case, you understand and agree that Respondus will treat your use of the Help Services as acceptance of the Help Center Terms.
+
+<span class="terms-subtitle">Data Collection</span>
+
+Respondus collects data to operate effectively and to strive to provide you with the best experience with LockDown Browser and Respondus Monitor. You provide some of this data directly, such as when you contact us for support. Some data is obtained by recording how you interact with LockDown Browser and Respondus Monitor by, for example, receiving error reports or usage data from software running on your device. The data we collect depends on the features you use within the Help Services, and includes the following:
+<br><br>
+Webcam & Microphone Check. The webcam and microphone check streams video and audio from your webcam to the Respondus servers. The video and audio can then be played back by you to ensure the webcam and microphone are working properly. The video and audio recorded during the webcam and microphone check is stored in temporary cache on the Respondus server and is automatically deleted in about an hour. Persistent storage is not used for these recordings, and Respondus does not provide a way to electronically identify the recordings as being transmitted from a specific user.
+<br><br>
+System Check. The System Check gathers certain information from your computing device, the networking environment, the institution's Learning Management System, and the Respondus Monitor server itself.
+<br><br>
+All data gathered during the System Check is presented to you on your screen, including a unique System Check ID. The System Check does NOT contain username, user ID, or the password used to access the institution's Learning Management System.
+<br><br>
+You have the option to send System Check results by email, and if so, you must enter an email address for the recipient of the email message. If the System Check results are sent by email, log files from software of LockDown Browser are additionally transmitted to a Respondus server. Log files contain details of the interaction between the LockDown Browser and/or Respondus Monitor and your institution's Learning Management System, from the time you log into the Learning Management System using LockDown Browser and Respondus Monitor until the session is exited or terminated. Log files are stored locally on your computer in an encrypted format and, if transmitted to Respondus, are sent in encrypted format over HTTPS. Log files do NOT contain user name, user ID, or the password used to access the institution's Learning Management System.
+<br><br>
+System Check data and log files may be sent to a Respondus web server or a third party cloud server for storage and further processing by Respondus. Respondus may use System Check data and log files to assist you with a technical issue. Respondus may also aggregate and analyze the System Check data to, for example, improve the Software or its technical support services. System Check data and log files aren't sold, distributed, or made available to affiliate or third party businesses.
+<br><br>
+Report An Issue. The Report An Issue feature enables you to provide feedback to Respondus about LockDown Browser and Respondus Monitor. System Check data and log files, as described above, are collected by Respondus during this process. You are informed of this transfer of data each time the Report An Issue feature is used. You may choose, but you are not required, to provide an email address and contact information when using this feature. System Check data, log files, contact information, and feedback you provide may be sent to a Respondus web server or third party cloud server for storage and further processing by Respondus. No data transmitted to Respondus from the Report An Issue feature will be sold, distributed, or made available to affiliate or third party businesses.
+<br><br>
+Knowledge Base. A link to a knowledge base is included with the Help Services. No individual data is collected by Respondus during the use of the knowledge base, although Respondus may analyze aggregated usage data of the knowledge base to improve the service.
+<br><br>
+Technical Support. The Help Services contains a link that enables users to open a support ticket with Respondus. The System Check ID for the most recent System Check is automatically populated in the form used to create a support ticket. You must additionally enter your name and a valid email address through which communication with the Respondus support team will occur. Throughout the support process, you may, at your own discretion, provide personally identifiable information that will be used by the Respondus support team to analyze the issue and communicate with you. All communication between you and the Respondus team is stored on a Respondus web server, and may be used by Respondus to improve LockDown Browser and/or Respondus Monitor.
+<br><br>
+Express Incorporation. All conditions set forth in the Respondus Monitor Terms of Use, including the PRIVACY & SECURITY POLICY, USER CONDUCT, RESPONDUS USERNAME/ID AND PASSWORD POLICY, ACTIVITY GENERAL, CHANGES, WARRANTIES YOU PROVIDE, OPT-OUT, DISCLAIMERS, INTELLECTUAL PROPERTY, and MISCELLANEOUS are expressly included in these Help Center Terms to the extent applicable. Respondus will not use data collected via the Help Services in any way that conflicts with the Respondus Monitor Terms of Use. You also expressly agree not to use the Help Services in any way that conflicts with any of the Respondus Monitor Terms of Use, including, for example, the prohibitions set forth in the USER CONDUCT section. Respondus cannot make representations regarding the security of information you transmit through a third party email service provider while using the Help Services; however, to the extent Respondus stores any such information, the storage of such information by Respondus will be compliant with the PRIVACY & SECURITY POLICY.
+
+</div>
+
+<div id="terms-button-row" class="row"> 
+<div class="col-xs-6">
+  <button id="okButton" class="btn-primary"><span class="i8" data-string="ok_button"></span></button>
+</div>
+<div class="col-xs-6">  
+  <a id="canceltermslink" href="#"><span class="i8" data-string="cancel_button"></span></a>
+</div>
+</div>
+
+</div>
+
+
+
+
+
+<div id="icon-div" class="icon"> 
+</div>
+
+<div id="selection-div" class="container">
+
+  <div id="main_header_text" style="display:none;">
+  <h1 class="i8" data-string="lockdown_title"></h1>
+  </div>
+
+ 
+	
+
+  <div id="errortext" style="display:none;">
+  <span id="errorinfo" class="well"></span>
+  </div>
+
+	<p><span id="entrytext" style="display:none;"><span class="i8" data-string="entry_text"></span></span></p>
+
+  <p>
+  <input id="institutionSearch" data-toggle="popover" data-content="No results found." style="display:none;" type="text">
+  </p>
+
+  <select id="institutionList" style="display:none;"></select>
+  
+  <p>
+  <select id="profileList" style="display:none;"></select>
+  </p>
+  <p>
+  <button id="saveButton" class="btn-primary" style="display:none;"><span class="i8" data-string="select_button"></span></button>
+  </p>
+  <a id="cancellink" href="#" style="display:none;"><span class="i8" data-string="cancel_button"></span></a>
+  
+<a id="reportlink" href="#" style=""><span class="i8" data-string="report_issue"></span></a>
+	<br/>
+
+</div>
+
+
+
+
+<div id="listener">
+      
+
+      <embed id="ldb_assist"
+             width=0 height=0
+             src="native/ldb_assist.nmf"
+             type="application/x-pnacl" />
+    </div>
+
+
+    <script src="js/pako.min.js"></script>
+
+
+
+
+   <script src="js/jquery-3.4.1.min.js"></script>
+   <script src="js/jquery.validate.min.js"></script>
+   <script src="js/bootstrap.js"></script>   
+   <script src="js/logging.js"></script>
+   <script src="js/md5.js"></script>
+   <script src="js/blowfish.js"></script>
+
+   <script src="js/splash_control.js"></script>
+   
+
+
+</body>
+</html>
+

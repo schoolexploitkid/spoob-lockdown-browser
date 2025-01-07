@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>  
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/jquery-ui.min.css">
+  <link rel="stylesheet" href="css/webview.css">
+  
+  
+    <meta charset="utf-8">
+    <style type="text/css">
+      body {
+        margin: 0px;
+      }
+    </style>
+
+    
+    
+</head>
+
+
+<body>
+
+
+<div class="container-fluid nomargin">
+
+<div class="tabbox">  
+  <div class="tabbox-close">
+    <a id="closewindowbutton" data-trigger="focus" data-toggle="popover" data-content="" aria-label="Close">    
+      <i class="fa fa-close" aria-hidden="true"></i>
+    </a>
+  </div>
+
+  <ul id="tablist">      
+      <li class="active"><a data-target="#home" data-toggle="tab" name="tab1" class="tab"><span class="i8" data-string="lms_name_canvas"></a></li>      
+  </ul>
+  
+  
+</div>
+  
+
+
+<div id="buttondiv">
+    <ul class="nav navbar-nav">    
+      <li><a id="leftbutton"   class="navbar-btn" href="#"><img src="images/arrow_back_24dp_on.png" alt="Back"></a></li>  
+      <li><a id="rightbutton"   class="navbar-btn" href="#"><img src="images/arrow_forward_24dp_on.png" alt="Forward"></a></li>  
+      <li><a id="reloadbutton"  class="navbar-btn" href="#"><img src="images/refresh_24dp.png" alt="Reload"></a></li>   
+      <li><a id="stopbutton"    class="navbar-btn" href="#"><img src="images/stop_24dp.png" alt="Stop"></a></li> 
+      
+      <li><a id="settingButton" class="navbar-btn" href="#"><img src="images/settings_24dp.png" alt="Settings"></a></li>   
+      <li><a id="calculatorbutton-right"    class="navbar-btn pull-right" href="#"><img src="images/calculator_24dp.png" alt="Calculator"></a></li> 
+    </ul>
+  
+    <div id="blocked-link"><span class="i8" data-string="link_blocked"></div>
+<div id="button-cover"> </div>
+</div>
+ 
+
+
+  <div id="calculator_box" draggable="true">
+  </div> 
+  
+
+
+  <div id="tab-content" class="tab-content">  
+
+
+    <div id="home" class="tab-pane fade in active">
+          
+      <webview id="main_webview" src="http://www.google.ca" partition="browser"></webview>
+      
+
+      <div id="overlay-dialog" class="container-fluid ">
+        <div class="container">    
+        
+        <p><span id="dialogTextSpan"></span></p>      
+
+
+        <div id="yesnodiv">
+          <div id="yesDialogButtonDiv">
+              <button id="yesDialogButton" class="btn-primary actionButton" ><span class="i8" data-string="yes_button"></button>
+          </div>
+
+          <div id="noDialogButtonDiv">
+              <button id="noDialogButton" class="btn-primary actionButton" ><span class="i8" data-string="no_button"></button>
+          </div>
+        </div>
+        </center>
+
+        </div>
+      </div>
+
+      <div id="overlay-exitdialog" class="container-fluid ">
+        <div class="container">    
+        
+        <p><span id="exitTextSpan"><span class="i8" data-string="early_exit_warning"></span></p>      
+
+
+        <div id="yesnodiv">
+          <div id="returnExitButtonDiv">
+              <button id="returnExitButton" class="btn-primary actionButton"><span class="i8" data-string="return_exam_button"></button>
+          </div>
+
+          <div id="closeExitButtonDiv">
+              <button id="closeExitButton" class="btn-primary actionButton"><span class="i8" data-string="close_browser_button"></button>
+          </div>
+        </div>
+        </center>
+
+        </div>
+      </div>
+
+      <div id="overlay-exitreasondialog" class="container-fluid ">
+        <div class="container">    
+        
+        <p><span id="exitTextSpan"><span class="i8" data-string="early_exit_reason"></span></p>      
+
+        <form id="exit-reason-form" name="exit-reason-form">
+        <div id="exitReasonTextDiv"> 
+          <textarea id="exitReasonText" name="exitReasonText" rows="3" style="width:90%"></textarea>
+        </div>
+      </form>
+
+        <div id="yesnodiv">
+          <div id="returnExitReasonButtonDiv">
+              <button id="returnExitReasonButton" class="btn-primary actionButton"><span class="i8" data-string="return_exam_button"></button>
+          </div>
+
+          <div id="closeExitReasonButtonDiv">
+              <button id="closeExitReasonButton" class="btn-primary actionButton"><span class="i8" data-string="submit_exam_button"></button>
+          </div>
+        </div>
+        </center>
+
+        </div>
+      </div>
+
+      <div id="overlay-div" class="container-fluid ">
+        <div class="container">
+          <h1><span id="loadingMessage"><span class="i8" data-string="loading_exam"></span></h1>
+
+          <div id="passwordMessage" style="display:none;">
+          <p><span id="passwordneeded" class="i8" data-string="exam_password_needed"></p>
+          <p><span id="optionalmonitor" class="i8" data-string="monitor_password_needed"></p>
+
+          <p>
+          <input id="examPassword" type="password">
+          </p>
+
+          
+          <p>          
+          <button id="password_cancelButton" class="btn-default actionButton"><span class="i8" data-string="cancel_button"></button>
+          <button id="password_continueButton" class="btn-primary actionButton"><span class="i8" data-string="continue_button"></button>
+          </p>
+          </div>
+
+          <div id="examMessage" style="display:none;">
+          <p><span class="i8" data-string="exam_settings"></p>
+          </div>
+
+          <div id="ldbMessage" style="display:none;">
+          <p><span class="i8" data-string="not_required"></p>
+          </div>
+
+          <div id="cbMessage" style="display:none;">
+          <p><span class="i8" data-string="not_enabled"></p>
+          </div>
+
+          <div id="monMessage" style="display:none;">
+          <p><span class="i8" data-string="monitor_required"></p>
+          </div>
+
+          <div id="exiterrorButton" style="display:none;">
+            <button id="exitbutton" class="btn-primary actionButton" ><span class="i8" data-string="exit_button"></button>
+          </div>
+        </div>
+       </div>
+
+       <div id="overlay-complete-div" class="container-fluid">
+          <div id="overlay-complete-interior">
+          <h1 id="exitexamtext" tabindex="0"><span class="i8" data-string="exam_complete"></h1><p>
+          <button id="exitexambutton" class="btn-primary actionButton" ><span class="i8" data-string="exit_exam_button"></button><p>
+          <h3 tabindex="0"><span class="i8" data-string="exit_kiosk"></h3>          
+          </div>
+       </div>
+
+       <div id="overlay-review-div" class="container-fluid">       
+       </div>
+
+    </div>
+    
+  </div>
+</div>
+
+<div id="listener">
+    <embed id="ldb_assist"
+             width=0 height=0
+             src="native/ldb_assist.nmf"
+             type="application/x-pnacl" />
+</div>
+
+   <script src="js/jquery.min.js"></script>   
+   <script src="js/bootstrap.js"></script>
+   <script src="js/jquery-ui.min.js"></script>
+   <script src="js/canvas_control.js"></script>
+   <script src="js/logging.js"></script>
+   <script src="js/md5.js"></script>
+   <script src="js/jquery.validate.min.js"></script>
+
+    <!--CALCULATOR SCRIPT-->
+    <link href="css/calculator.css" rel="stylesheet" type="text/css" />
+    <script src="js/calculator-ref.js" type="text/javascript"></script>
+    <script src="js/calculator.js" type="text/javascript"></script>
+
+   
+</body>
+</html>

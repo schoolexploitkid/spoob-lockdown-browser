@@ -1,0 +1,43 @@
+<html>
+<head>
+  <title>LockDown Browser for Chromebook</title>
+  
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/jquery-ui.min.css">
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans" />
+  <link rel="stylesheet" href="css/secab.css">
+
+  <meta content="authenticity_token" name="csrf-param" />
+  <meta content="5FtG/lK43fUptMsYGEAayQTv90cvs7dSZRrpbavOg7A=" name="csrf-token" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+  <div id="ldb_titlebox">    
+    <div id="ldb_title"><img src="images/ldb-for-cb-logo.png"></img></div>
+    <div id="ldb_subtitle"><span id="loading"></span></div>   
+    <div id="ldb_schoology_issue" style="display: none;">
+        <h1>Please check that popups are allowed for Schoology or the exam will not start.</h1>
+        <br>
+        <button id="exit_button" type="button" class="btn btn-primary">Click to Exit</button>
+    </div> 
+  </div>
+
+  
+
+
+  <iframe id="launch-frame" src="" style="display:none"></iframe>
+
+   <script src="js/jquery-3.4.1.min.js"></script>  
+   <script src="js/bootstrap.js"></script>      
+   <script src="protectwindow.js"></script>   
+   <script src="security_b.js"></script>      
+
+  
+
+</body>
+</html>
+
+
+ 

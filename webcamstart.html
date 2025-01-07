@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Webcam Check</title>
+	
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">	
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/webcamstart.css">
+</head>
+<body>
+
+	<div id="exitbar"><i id="susclose" class="fa fa-window-close"></i></div>
+
+	<div id="titleMessage" style="display:none">
+		<H1> Please wait as we setup the exam... </H1>
+		<div class="sk-chase">
+			<div class="sk-chase-dot"></div>
+			<div class="sk-chase-dot"></div>
+			<div class="sk-chase-dot"></div>
+			<div class="sk-chase-dot"></div>
+			<div class="sk-chase-dot"></div>
+			<div class="sk-chase-dot"></div>
+		</div>
+
+	</div>
+
+	<div id="errorMessage">
+		<h2>Sorry, there appears to be an issue with the configuration of this exam.</h2>
+		<h3>Please open at ticket at: https://support.respondus.com/ with a screenshot of this screen or contact your administrator.</h3>
+		<span id="errorMessageText"></span>
+		<span id="errorMessageTextParam"></span>
+	</div>
+
+	<div id="errorMessageProfile">		
+		<div id="profileContent">
+			
+		<span id="errorMessageProfileText"></span>	
+		<br>	
+		<span id="errorMessageProfileURL"></span>	
+		
+		</div>
+
+		There is a problem with the URL for this exam. See <u><a id="end_exam_link" target="_blank" href="">this article</a></u> for more information.
+		
+		<div id="errorExitButton"><button id="end_exam" type="button" class="btn" style="width:100px;">Continue</button></div>		
+	</div>
+
+	
+
+	<div id="monitorProfileMessage">
+		<div id="ldb_titlebox">    
+    		<div id="ldb_title">Exam title states a webcam must be used, but the exam settings don't indicate that monitor is enabled.</div>
+    		<button id="not_enabled" type="button" class="btn btn_light" style="width:100px;">Continue</button>    
+ 		 </div>
+		</div>
+	
+
+	<div id="extensionMessage">
+		<div id="ldb_titlebox">    
+    		<div id="ldb_title">Your instructor has not made this exam available for LockDown Browser for Chromebook. You will need to use LockDown Browser for Windows or Mac to take this exam.</div>
+    		<button id="not_enabled" type="button" class="btn btn_light" style="width:100px;">Continue</button>    
+ 		 </div>
+		</div>
+
+	<iframe id="launch-frame" src="" style="display:none"></iframe>
+	<iframe id="mainframe" allow="camera;microphone;display-capture" allow_list="https://smc-service-cloud.respondus2.com" src="" ></iframe>
+	
+	<script src="js/crypto-js.min.js"></script>
+	<script src="jquery-3.4.1.min.js"></script>   
+	<script src="protectwindowsus.js"></script>
+	<script src="bootstrap.js"></script>
+	<script src="js/md5.js"></script>
+	<script src="js/blowfish.js"></script>
+
+
+	<script src="js/webcamstart.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+
+ 

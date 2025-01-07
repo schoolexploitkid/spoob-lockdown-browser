@@ -1,0 +1,156 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 3,
+  "name": "LockDown Browser",
+  "short_name": "LockDown Browser",
+  "description": "LockDown Browser is a custom browser that locks down the exam environment within specific learning and assessment systems.",  
+  "version": "0.3.00.466",      
+  "author" : "VERSIONPROD",  
+  "default_locale":"en",
+  "incognito" : "not_allowed",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+    "48": "icon.png",
+    "128": "icon.png"
+    }
+  },  
+  "permissions": [    
+      "system.display",
+      "history",
+      "cookies",      
+      "storage",                
+      "contextMenus",
+      "notifications",         
+      "webNavigation",
+  		"webRequest",       
+      "declarativeNetRequestWithHostAccess",    		
+      "tabs",
+      "activeTab",
+      "scripting",
+      "alarms", 
+      "management",
+      "idle",
+      "clipboardRead",
+      "contentSettings",
+      "browsingData"
+    ],
+    "declarative_net_request" : {
+    "rule_resources" : [{
+      "id": "ruleset_1",
+      "enabled": true,
+      "path": "rules_1.json"
+    }]
+  },
+    "host_permissions": [
+      "http://*/*", "https://*/*", "<all_urls>"
+    ],
+    "content_scripts": [   
+    
+      {    
+      "matches": ["*://*/assignment/*/assessment"],
+      "run_at": "document_end",    
+      "js": ["js/jquery-3.4.1.min.js","targetblank.js", "essayblock.js"],
+      "all_frames": true
+    },
+    {    
+      "matches": ["*://*/common-assessment-delivery/start*"],
+      "run_at": "document_end",    
+      "js": ["js/jquery-3.4.1.min.js","targetblank2.js"]
+    },
+    
+     {
+      "all_frames": true,
+      "js": [ "js/jquery-3.4.1.min.js", "protectcanvaslinks.js" ],
+      "matches": [ "*://*/common-assessment-delivery/start*", "*://*/quizzes.respondus.start*", "*://*/taking/*/take*" ],
+      "run_at": "document_end"
+   },       
+       
+   {
+    "matches": [ "*://*.quiz-lti-iad-prod.instructure.com/*", "*://*/courses/*/external_tools/retrieve*" ],
+    "run_at": "document_start",
+    "js": ["jquery-3.4.1.min.js", "protectcanvasnew.js", "essayblock.js"],
+    "all_frames" : true
+  },
+  
+   {
+      "css": [ "css/jquery-ui.min.css", "css/bootstrap.min.css" ],
+      "js": [ "jquery-3.4.1.min.js", "bootstrap.js", "js/content-script.js" ],
+      "matches": [ "http://*/courses/*/quizzes/*/take*", "https://*/courses/*/quizzes/*/take*", "https://*/assignment/*/assessment*", "https://*/webapps/assessment/*" ,  "*://*/common-assessment-delivery/start*"],
+      "run_at": "document_start"
+   },
+   
+   {    
+    "matches": ["*://*/common-assessment-delivery/start*", "https://*/ultra/courses/*/outline/assessment/*/overview/attempt*", "https://*/webapps/assessment/take/*", "*://*/ultra/courses/_111_1/cl/outline*", "*://*.quiz-lti-iad-prod.instructure.com/*"],
+    "run_at": "document_end",        
+    "js": [ "jquery-3.4.1.min.js", "essayblock.js" ],
+    "all_frames":true
+  },
+  {   
+    "matches": ["*://*/courses/*/quizzes/*/take", "*://*/courses/*/quizzes/*/take*"],
+    "run_at": "document_end",        
+    "js": [ "jquery-3.4.1.min.js", "essayblock.js" ],
+    "all_frames":true
+  },
+  
+  {    
+    "matches": ["*://*/mod/quiz/processattempt.php*", "*://*/mod/quiz/view.php*"],
+    "run_at": "document_end",        
+    "js": [ "jquery-3.4.1.min.js", "essayblock.js" ],
+    "all_frames":true
+  },
+   {    
+    "matches": ["*://*/mod/quiz/attempt.php*"],
+    "run_at": "document_end",    
+    "css": ["css/moodle-fix.css"],
+    "js": [ "js/jquery-3.4.1.min.js", "targetblank4.js", "essayblock.js" ],
+    "all_frames":true
+  },
+  {
+    "matches": ["http://*/courses/*/quizzes/*/take?user_id=*", "https://*/courses/*/quizzes/*/take?user_id=*"],
+    "js": ["jquery-3.4.1.min.js", "canvas_control.js"]
+  },
+  {
+    "matches": ["https://*/quizzes.respondus.launch/courses/*/assignments/*"],
+    "js": ["jquery-3.4.1.min.js", "canvas_autostart.js"]
+  },
+  {    
+    "matches": ["*://*/d2l/lms/quizzing/user/attempt/quiz_start_frame_auto.d2l*", "*://*/d2l/lms/quizzing/user/attempt/quiz_attempt_frame_auto.d2l*"],
+    "run_at": "document_end",        
+    "js": [ "jquery-3.4.1.min.js", "js/d2lessay.js" ],
+    "all_frames": true
+  },
+  {
+    "matches": ["*://*/webapps/assessment/*"],
+    "run_at": "document_start",
+    "css": ["blackboard.css"],
+    "all_frames": true,
+    "js": ["jquery-3.4.1.min.js", "blackboard_control.js"]
+  },
+  {
+    "matches": ["*://*/webapps/assessment/take/launch.jsp*"],
+    "run_at": "document_end",    
+    "all_frames": true,
+    "js": ["jquery-3.4.1.min.js", "js/findpass.js",  "essayblock.js"]
+  },
+  {
+        "js": [ "js/jquery-3.4.1.min.js", "kowl.js" ],
+        "css": ["kowl.css"],
+        "matches": [ "*://respondus.knowledgeowl.com/home*" ],        
+        "run_at": "document_end",
+        "all_frames": true
+     }
+
+],
+  "web_accessible_resources": [
+    {
+      "resources": [ "background.js", "manifest.json", "border.js", "border.css", "images/icon_128.png", "tabs/tabs.html", "tabs/tabs.css", "tabs/tabs.js", "webcamstart.html", "examend.html", "warning.html", "js/inject/myscript.js" ],
+      "matches": [ "<all_urls>" ]
+    }
+    ]
+
+}

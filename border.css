@@ -1,0 +1,79 @@
+
+body {
+	transform: translateY(50px);
+	height: 95vh;
+}
+
+
+#FRM_header {
+	transform: translateY(50px)!important;	
+	padding-left: 10px;	
+}
+
+#FRM_attempt {
+	transform: translateY(50px)!important;	
+	padding-left: 10px;	
+}
+
+#FRMSET_infoSave {
+	transform: translateY(50px)!important;	
+	font-size: 5px!important;
+}
+
+#d2l_body {
+	margin: 53px!important;
+}
+
+.vui-heading-2 {
+	font-size: 14px!important;
+}
+
+
+body.dbd_frame {
+	transform: translateY(50px);
+	padding-top: 42px;
+}
+
+
+
+#top, #bottom, #left, #right {
+	background: #1f64f0;
+	position: fixed;
+	z-index: 100;
+	}
+
+#left, #right {
+	top: 0; bottom: 0;
+	width: 25px;
+	}
+
+#left { left: 0; }
+
+#right { right: 0; }
+
+#top, #bottom {
+	left: 0; right: 0;
+	}
+
+#top { top: -50px; height: 50px;}
+#bottom { bottom: 0; height: 25px;}
+
+#ldbmessage { margin: auto; width: 20%; font-size: 12; display: block; color: white; }
+#ldbmessage img { padding-right: 10px; }
+
+.nav-link {
+	color: white;	
+	font-size: 14px;
+}
+
+.nav-link active {
+	background-color: grey;
+}
+
+.button-2 {
+	display:none!important;
+}
+
+input[name="top_Close Window"] {
+	display:none!important;
+}

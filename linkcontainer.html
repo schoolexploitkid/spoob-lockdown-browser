@@ -1,0 +1,68 @@
+<html>
+<head>
+  <title>LockDown Browser for Chromebook-ExamLink</title>
+
+  <style>
+    body, html {
+        height: 100%;
+        margin: 0;
+        display: flex;
+        
+    }
+    #canvas_container {
+        position: relative;
+        top: 10px;
+        width: 1000px;
+        height: 675px;
+        overflow: auto;
+        border: 2px solid black;
+        margin: 20px;
+        padding: 5px;
+    }
+
+    
+</style>
+  
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/jquery-ui.min.css">
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans" />  
+  
+
+
+  <meta content="authenticity_token" name="csrf-param" />
+  <meta content="5FtG/lK43fUptMsYGEAayQTv90cvs7dSZRrpbavOg7A=" name="csrf-token" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  
+  <div id="my_pdf_viewer">
+    <div id="canvas_container">
+        <canvas id="pdf_renderer"></canvas>
+    </div>
+    <div id="navigation_controls">
+        <button id="go_previous">Previous</button>
+        <input id="current_page" value="1" type="number"/>
+        <button id="go_next">Next</button>
+    </div>
+    <div id="zoom_controls">  
+        <button id="zoom_in">+</button>
+        <button id="zoom_out">-</button>
+    </div>
+</div>
+
+  
+
+  
+  
+   <script src="js/jquery-3.4.1.min.js"></script>
+   <script src="js/jquery.validate.min.js"></script>
+   <script src="js/bootstrap.js"></script>   
+   <script src="js/pdf.min.2.0.943.js"></script>
+   <script src="js/pdf.min.2.0.943.worker.js"></script>
+   <script src="js/pdfrender.js"></script>
+
+   
+</body>
+</html>
+
