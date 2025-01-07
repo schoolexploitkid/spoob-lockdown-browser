@@ -1,0 +1,257 @@
+* {
+    box-sizing: border-box;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+    font-size: 11px;
+}
+
+body {
+    background-color: #4a4a4a;
+}
+
+#brand_line {
+    color:white;
+    font-family: 'MuseoSans';
+    font-size: 18px;
+    font-weight: 500;        
+}
+
+#brand_line i {
+    height: 15px;
+    color:white;    
+    font-size: 18px;    
+    margin-top: 15px;
+    margin-right: 25px;
+}
+
+#toomanytabs {
+    display: none;
+    float:right;
+    color: white;
+    top:-20px;
+    font-size: 16px;
+    position: relative;
+}
+
+#hidden-pass-div {
+    display: none;
+    height: 100%;
+    
+    margin-top: 5px;    
+}
+#passlabel {
+    display: inline;
+    color: white;
+    margin-left: 5px;
+    margin-right: 5px;
+    font-family: 'Open Sans';
+    font-size: 16px; 
+}
+#pass {
+    display: inline;
+    color: black;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    margin-right: 5px;
+    height: 80%;
+    font-size: 14px; 
+    width: 100px;
+    height: 35px;
+}
+#passclose {
+    display: inline;
+    color: white;    
+    background-color: #387DA6;
+    margin-bottom: 4px;
+    margin-right: 30px;
+    font-size: 12px; 
+    height: 35px;
+}
+#passok {
+    display: inline;
+    color: white;
+    background-color: #387DA6;
+    margin-bottom: 4px;
+    margin-right: 5px;
+    font-size: 12px; 
+    height: 35px;
+}
+#passerror-div {
+    display: none;
+    background-color: #ebd2d5;
+    border-radius: 4px;
+    margin-top: 10px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: right;
+    margin-right: 30px;
+}
+#passerror {
+    display: block;
+    color: #ae0015;
+
+    font-size: 14px; 
+    font-family: 'Open Sans';
+    font-weight: 400;
+
+    margin-top: 3px;
+    margin-bottom: 3px;        
+}
+
+
+
+#calc-button-div {    
+    display: block;
+    margin-right: 10px;
+    margin-top: 8px;
+    margin-bottom: 5px;
+}
+
+#calc-button {    
+
+    margin-left: 10px;
+    margin-right: 25px;
+    padding: 5px;
+}
+
+#exit-button-div {
+    display: block;
+    
+    height: 40px;
+    width: 80px;
+    
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    
+    padding-left: 30px;
+    
+    border-left: 1px solid #aaaaaa;  
+}
+
+
+
+#exit-button {
+    display: block;
+    height: 30px;
+    width: 30px;
+    margin-top: 5px;
+    
+     
+    
+    width: 30px;
+    height: 30px;
+    
+    
+         
+}
+
+.navbar {
+    cursor: default;
+}
+
+.nav-item {
+    border: grey 1px solid;
+}
+
+.nav-item a, .nav-item a:hover {
+    color: #efefef;   
+    min-width: 175px;
+    font-size: 16px;
+    background-color: #4a4a4a!important;
+}
+
+.nav-item a i {
+    color: #efefef;   
+}
+
+.nav-item.active a i {
+    color: #4a4a4a;   
+}
+
+.nav-item.active a, .nav-item.active a:hover {
+    color: #4a4a4a;
+    min-width: 175px;
+    font-size: 16px;
+    background-color: white!important;
+}
+
+.closeTab {
+    margin: -2px 0 0 10px;
+    font-size: 18px!important;
+    color: #4a4a4a;
+    float: right;
+    text-decoration: none;
+    border: none;
+}
+
+#tabs {
+    width: 100%;
+    background-color: #1f64f0;
+    cursor: default;
+    display: table;
+    table-layout: fixed;
+    white-space: nowrap;
+}
+
+.tab {
+    display: table-cell;
+    padding: 0 5px;
+    color: #fff;
+    vertical-align: middle;
+    text-overflow: ellipsis;
+    line-height: 12px;
+}
+
+.odd {
+    background-color: #808080;
+}
+
+.even {
+    background-color: #A9A9A9;
+}
+
+#webcam-record {    
+    height: 14px;
+    width: 130px;
+     margin-top: 15px;
+}
+
+#recording-li {
+    width:200px;
+    display: none;
+}
+
+#record-icon {        
+    height: 23px;
+    
+    margin-left: 10px;    
+}
+
+.vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+
+
+img {   
+    vertical-align: middle;
+}
+
+#dialog-confirm {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    width: 500px;
+    height: 500px;
+}
+
+
